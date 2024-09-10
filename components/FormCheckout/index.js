@@ -9,8 +9,8 @@ import { toast } from 'react-toastify';
 export default function FormCheckout({ tickets }) {
   const router = useRouter();
   const { ticketId, organizer } = router.query;
-  console.log('organizer');
-  console.log(organizer);
+  //   console.log('organizer');
+  //   console.log(organizer);
 
   const [form, setForm] = useState({
     email: '',

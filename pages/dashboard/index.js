@@ -6,9 +6,11 @@ import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar';
 import { getData } from '../../utils/fetchData';
 import { formatDate } from '../../utils/formatDate';
+import CardDashboard from '../../components/CardDashboard';
 import { useEffect } from 'react';
 
 export default function Dashboard({ data }) {
+  const num = 0;
   return (
     <>
       <Head>
@@ -23,34 +25,43 @@ export default function Dashboard({ data }) {
 
       <section className="bg-navy">
         <div className="checkout container">
-          <div className="text-center checkout-title">Invest In Yourself</div>
+          <div className="text-center checkout-title">Order Histories</div>
+          <CardDashboard data={data} />
           {data.map((data) => (
-            <div
-              className="event-details container d-flex flex-wrap justify-content-lg-center align-items-center gap-5"
-              key={data._id}
-            >
-              <div className="d-flex flex-column gap-3">
-                <h5>{data.historyEvent.title}</h5>
+            // <div
+            //   className="event-details container d-flex flex-wrap justify-content-lg-center align-items-center gap-5"
+            //   key={data._id}
+            // >
+            //   {/* <img
+            //     src={`${process.env.NEXT_PUBLIC_API}/orders/${data.historyEvent.image.toString()}`}
+            //     alt="semina"
+            //   /> */}
+            //   <div className="d-flex flex-column gap-3">
+            //     <h5>
+            //       {data.historyEvent.title}
+            //       {/* {data.historyEvent.image.toString()} */}
+            //     </h5>
 
-                <div className="d-flex align-items-center gap-3">
-                  <img src="/icons/ic-marker-white.svg" alt="" />
-                  <span>{data.historyEvent.venueName}</span>
-                </div>
-                <div className="d-flex align-items-center gap-3">
-                  <img src="/icons/ic-time-white.svg" alt="" />
-                  <span>
-                    {moment(data.historyEvent.date).format('HH.MM A')}
-                  </span>
-                </div>
-                <div className="d-flex align-items-center gap-3">
-                  <img src="/icons/ic-calendar-white.svg" alt="" />
-                  <span>{formatDate(data.historyEvent.date)}</span>
-                </div>
-              </div>
-              <div className="total-price">
-                {data.totalPay === 0 ? 'free' : `$${data.totalPay}`}
-              </div>
-            </div>
+            //     <div className="d-flex align-items-center gap-3">
+            //       <img src="/icons/ic-marker-white.svg" alt="" />
+            //       <span>{data.historyEvent.venueName}</span>
+            //     </div>
+            //     <div className="d-flex align-items-center gap-3">
+            //       <img src="/icons/ic-time-white.svg" alt="" />
+            //       <span>
+            //         {moment(data.historyEvent.date).format('HH.MM A')}
+            //       </span>
+            //     </div>
+            //     <div className="d-flex align-items-center gap-3">
+            //       <img src="/icons/ic-calendar-white.svg" alt="" />
+            //       <span>{formatDate(data.historyEvent.date)}</span>
+            //     </div>
+            //   </div>
+            //   <div className="total-price">
+            //     {data.totalPay === 0 ? 'free' : `$${data.totalPay}`}
+            //   </div>
+            // </div>
+            <></>
           ))}
         </div>
       </section>

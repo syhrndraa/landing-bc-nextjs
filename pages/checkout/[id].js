@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar';
 import { getData } from '../../utils/fetchData';
 import { formatDate } from '../../utils/formatDate';
 import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
 
 export default function Checkout({ detailPage }) {
   const router = useRouter();
@@ -101,3 +102,50 @@ export async function getServerSideProps(context) {
     props: { detailPage: res },
   };
 }
+
+// export async function getServerSideProps(context) {
+//   const { token, refreshToken, email } = context.req.cookies;
+
+//   console.log('token');
+//   console.log(token);
+
+//   console.log('refreshToken');
+//   console.log(refreshToken);
+
+//   console.log('email');
+//   console.log(email);
+
+//   if (!token) {
+//     if (!refreshToken) {
+//       return {
+//         redirect: {
+//           destination: '/signin',
+//           permanent: false,
+//         },
+//       };
+//     } else {
+//       const res = await getData(
+//         `api/v1/refresh-token/${refreshToken}/${email}`
+//       );
+//       //   const res = req.data;
+//       console.log('req');
+//       console.log(res.data.token);
+//       Cookies.set('token', res.data.token);
+//       //   console.log('token');
+//       //   console.log(res.token);
+//     }
+//   }
+//   //   console.log('res');
+//   //   console.log(res);
+//   const req = await getData(`api/v1/events/${context.params.id}`);
+
+//   const res = req.data;
+//   //   console.log('res');
+//   //   console.log(res);
+//   return {
+//     props: { detailPage: res },
+//   };
+//   // return {
+//   //   props: {},
+//   // };
+// }

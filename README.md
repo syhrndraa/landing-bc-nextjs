@@ -1,40 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Semina's Client Page (Content Management System)
 
-First, run the development server:
+Server page
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  https://github.com/syhrndraa/server-bc-expjs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Client page
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+  https://github.com/syhrndraa/client-bc-reactjs
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Home Page
+![App Screenshot](/images/home-page.jpeg)
+<br><br><br>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Auth Page
+#### Signin
+![App Screenshot](/images/signin.png)
+<br><br><br>
 
-## Learn More
+#### Signup
+![App Screenshot](/images/signup.png)
+<br><br><br>
 
-To learn more about Next.js, take a look at the following resources:
+#### OTP Verification
+![App Screenshot](/images/otp-verification.png)
+<br><br><br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### OTP Email
+![App Screenshot](/images/email-otp.png)
+<br><br><br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Detail Event
+![App Screenshot](/images/detail-event.jpeg)
+<br><br><br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Checkout Event
+![App Screenshot](/images/checkout.png)
+<br><br><br>
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/syhrndraa/landing-bc-nextjs
+```
+
+Go to the project directory
+
+```bash
+  cd landing-bc-nextjs
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+

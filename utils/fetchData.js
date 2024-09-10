@@ -24,3 +24,46 @@ export async function putData(url, payload, token) {
     },
   });
 }
+
+// export async function getData(url, payload, token) {
+//     try {
+//         refreshToken = Cookies.get("refreshToken")
+//         email = Cookies.get("email")
+
+//     } catch (error) {
+
+//     }
+//     return await axios.put(`${url}`, payload, {
+//       headers: {
+//         Authorization: `Bearer ${token}`,
+//       },
+//     });
+//   }
+
+// export async function getServerSideProps(context) {
+//   const { token } = context.req.cookies;
+
+//   if (!token) {
+//     if (!context.params.refreshToken) {
+//       return {
+//         redirect: {
+//           destination: '/signin',
+//           permanent: false,
+//         },
+//       };
+//     } else {
+//       const req = await getData(
+//         `api/v1/refresh-token/${context.params.refreshToken}/${context.params.email}`
+//       );
+//       const res = req.data;
+//       Cookies.set("token", res.token)
+//       console.log('res');
+//       console.log(res);
+//     }
+//   }
+//   //   console.log('res');
+//   //   console.log(res);
+//   return {
+//     props: {},
+//   };
+// }
