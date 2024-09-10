@@ -1,5 +1,5 @@
 
-# Semina's Client Page (Content Management System)
+# Semina's Landing Page
 
 Server page
 
